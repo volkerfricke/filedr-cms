@@ -1,7 +1,7 @@
 <?php 
 
 /** URL OF YOUR SITE, WITH TRAILING SLASH **/
-$config['url'] = '';
+$config['url'] = 'http://filedr.blitzendev.de/';
 
 /** CACHING STUFF **/
 $config['use_cache'] = false;
