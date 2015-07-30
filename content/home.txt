@@ -1,0 +1,9 @@
+template: home
+
+###
+
+title: filedr CMS
+
+###
+
+text: A file-driven CMS, simple as hell.
