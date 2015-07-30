@@ -1,0 +1,50 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+
+    ##
+    ## Black list
+    ##
+    RewriteRule ^themes/.*/(templates|partials)/.*.html index.php [L,NC]
+    RewriteRule ^app/.* index.php [L,NC]
+    RewriteRule ^content/.* index.php [L,NC]
+	RewriteRule ^cache/.* index.php [L,NC]
+
+
+    ##
+    ## White list
+    ##
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteCond %{REQUEST_URI} !\.js
+    RewriteCond %{REQUEST_URI} !\.map
+    RewriteCond %{REQUEST_URI} !\.ico
+    RewriteCond %{REQUEST_URI} !\.jpg
+    RewriteCond %{REQUEST_URI} !\.jpeg
+    RewriteCond %{REQUEST_URI} !\.gif
+    RewriteCond %{REQUEST_URI} !\.css
+    RewriteCond %{REQUEST_URI} !\.less
+    RewriteCond %{REQUEST_URI} !\.scss
+    RewriteCond %{REQUEST_URI} !\.pdf
+    RewriteCond %{REQUEST_URI} !\.png
+    RewriteCond %{REQUEST_URI} !\.swf
+    RewriteCond %{REQUEST_URI} !\.txt
+    RewriteCond %{REQUEST_URI} !\.xml
+    RewriteCond %{REQUEST_URI} !\.xls
+    RewriteCond %{REQUEST_URI} !\.eot
+    RewriteCond %{REQUEST_URI} !\.woff
+    RewriteCond %{REQUEST_URI} !\.woff2
+    RewriteCond %{REQUEST_URI} !\.ttf
+    RewriteCond %{REQUEST_URI} !\.svg
+    RewriteCond %{REQUEST_URI} !\.wmv
+    RewriteCond %{REQUEST_URI} !\.avi
+    RewriteCond %{REQUEST_URI} !\.mov
+    RewriteCond %{REQUEST_URI} !\.mp4
+    RewriteCond %{REQUEST_URI} !\.webm
+    RewriteCond %{REQUEST_URI} !\.ogg
+    RewriteCond %{REQUEST_URI} !themes/.*
+    RewriteRule ^ index.php [L,NC] 
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /index.php [L]
+</IfModule>
