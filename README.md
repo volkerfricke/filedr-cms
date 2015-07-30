@@ -1,4 +1,4 @@
 # filedr-cms
-A file-driven CMS, simple as hell.
+A file-driven CMS, simple.
 
 some notes
