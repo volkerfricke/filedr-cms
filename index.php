@@ -25,6 +25,6 @@ $componentsPath = $basePath.DIRECTORY_SEPARATOR .'components';
 $cachePath = $basePath.DIRECTORY_SEPARATOR .'cache';
 
 /*
- * load the Application
+ * load the Application1
  */
 require_once($appPath.DIRECTORY_SEPARATOR.'app.php');
